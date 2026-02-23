@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Translator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-[#0E1820]">
+
+  <div class="text-center">
+
+    <h2 class="text-4xl text-[#1AECFF] font-bold text-center">
+      Traductor
+    </h2>
+    <p class="text-sm text-slate-500 mb-10">Español ↔ Inglés</p>
+
+    <div class="flex justify-center items-center mb-4 gap-4">
+
+          <button id="esBtn"
+          class="px-4 py-2 rounded-lg bg-indigo-600 text-white font-semibold transition">
+          
+          </button>
+          <button id="swapBtn"
+          class="px-4 py-2 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"         xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 7H10C6.68629 7 4 9.68629 4 13C4 16.3137 6.68629 19 10 19H20M20 7L16        3M20 7L16 11"   stroke="currentColor" stroke-width="2" stroke-linecap="round"         stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <button id="enBtn"
+        class="px-4 py-2 rounded-lg bg-gray-200 font-semibold transition">
+
+        </button>
+
+
+    </div>
+
+    <div class="flex items-center justify-center gap-6">
+
+      <textarea id="inputText"
+      class="w-full bg-slate-800 text-white h-28 p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+      placeholder="Escribe aquí..."></textarea>
+      
+      <!-- <button id="translateBtn"
+        class="w-full mt-4  bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">
+        Traducir
+      </button> -->
+    
+    <textarea id="outputText"
+    class="w-full h-28 bg-slate-700 text-white p-4 border rounded-xl bg-gray-50 resize-none"
+    placeholder="Traducción..."
+    readonly></textarea>
+  </div>
+
+  </div>
+
+  <script src="./index.js"></script>
+
+</body>
+</html>
