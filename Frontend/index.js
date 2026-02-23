@@ -45,10 +45,14 @@ function swapLanguages() {
 
 // Traducir
 async function translateText() {
+  const text = inputText.value.trim()
   if (!inputText.value) return
 
-
-    const response = await fetch("http://localhost:3005/translate", {
+  try{
+    const response = await fetch(
+      "https://translate-d29q.onrender.com/translate" 
+        // "http://localhost:3005/translate"
+      , {
       method: "POST",
       headers:{
         "Content-Type": "application/json"
@@ -59,13 +63,30 @@ async function translateText() {
         to
       })
     })
-  const data = await response.json()
-  outputText.value = data.translatedText
+    if (!response.ok) throw new Error("Error en la petición")
+
+    const data = await response.json()
+    outputText.value = data.translatedText
+
+  }catch(error){
+    return
+  }    
+
 }
 
 // Eventos
 
-setTimeout(() => {
-  inputText.addEventListener("input", translateText)
-}, 1000)
+let timeoutId
+
+inputText.addEventListener("input", () => {
+  clearTimeout(timeoutId)
+
+  timeoutId = setTimeout(() => {
+    translateText()
+
+  }, 500)
+})
+
+
+
 swapBtn.addEventListener("click", swapLanguages)
