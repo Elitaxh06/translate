@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Translator</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="flex items-center justify-center min-h-screen bg-[#0E1820]">
+<body class="flex items-center justify-center min-h-screen bg-[#0E1820] px-4">
 
-  <div class="text-center">
+  <div class="text-center w-full max-w-4xl">
 
-    <h2 class="text-4xl text-[#1AECFF] font-bold text-center">
+    <h2 class="text-4xl md:text-7xl font-bold text-[#1AECFF]">
       Traductor
     </h2>
-    <p class="text-sm text-slate-500 mb-10">Español ↔ Inglés</p>
+    <p class="text-base md:text-lg text-slate-400 mb-8">Español ↔ Inglés</p>
 
-    <div class="flex justify-center items-center mb-4 gap-4">
+    <div class="flex justify-center items-center mb-6 gap-4">
 
           <button id="esBtn"
-          class="px-4 py-2 rounded-lg bg-indigo-600 text-white font-semibold transition">
+          class="px-6 py-3 text-lg rounded-lg bg-indigo-600 text-white font-semibold transition">
           
           </button>
           <button id="swapBtn"
-          class="px-4 py-2 rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition">
+          class="px-6 py-3 text-lg rounded-lg bg-blue-500 text-white font-semibold hover:bg-blue-600 transition">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"         xmlns="http://www.w3.org/2000/svg">
             <path d="M20 7H10C6.68629 7 4 9.68629 4 13C4 16.3137 6.68629 19 10 19H20M20 7L16        3M20 7L16 11"   stroke="currentColor" stroke-width="2" stroke-linecap="round"         stroke-linejoin="round"/>
           </svg>
@@ -36,10 +37,10 @@
 
     </div>
 
-    <div class="flex items-center justify-center gap-6">
+    <div class="flex flex-col md:flex-row gap-6 w-full">
 
       <textarea id="inputText"
-      class="w-full bg-slate-800 text-white h-28 p-4 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+      class="w-full min-h-[160px] md:min-h-[200px] text-lg p-4 rounded-xl bg-slate-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
       placeholder="Escribe aquí..."></textarea>
       
       <!-- <button id="translateBtn"
@@ -48,7 +49,7 @@
       </button> -->
     
     <textarea id="outputText"
-    class="w-full h-28 bg-slate-700 text-white p-4 border rounded-xl bg-gray-50 resize-none"
+    class="w-full min-h-[160px] md:min-h-[200px] text-lg p-4 rounded-xl bg-slate-700 text-white resize-none"
     placeholder="Traducción..."
     readonly></textarea>
   </div>

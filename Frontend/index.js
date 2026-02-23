@@ -50,8 +50,8 @@ async function translateText() {
 
   try{
     const response = await fetch(
-      "https://translate-d29q.onrender.com/translate" 
-        // "http://localhost:3005/translate"
+      // "https://translate-d29q.onrender.com/translate" 
+        "http://localhost:3005/translate"
       , {
       method: "POST",
       headers:{
