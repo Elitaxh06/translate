@@ -1,8 +1,10 @@
 # 🌍 Translator App
 
-Aplicación web fullstack que permite traducir texto en tiempo real entre Español e Inglés.
+Página web fullstack que permite traducir texto en tiempo real entre Español e Inglés.
 
-Este proyecto fue desarrollado utilizando **JavaScript Vanilla** para el frontend y **Node.js + Express** para el backend, integrando la **API de traducción MyMemory**.
+
+Este proyecto fue desarrollado como práctica de **JavaScript Vanilla** en el frontend y **Node.js + Express** en el backend, integrando la **API de traducción MyMemory**.  
+La idea principal fue reforzar fundamentos sin depender de frameworks como React, entendiendo mejor cómo funciona todo desde cero.
 
 ---
 
@@ -15,18 +17,16 @@ Ejemplo: https://translate-bice-two.vercel.app/
 
 ## 📌 Descripción
 
-Translator App permite a los usuarios traducir texto de manera instantánea entre Español e Inglés mediante una arquitectura frontend-backend desacoplada.
+Este proyecto esta enfocado en practicar:
 
-### Características principales
-
+- Manipulación del DOM
+- Manejo de eventos
+- Peticiones HTTP con Fetch
+- Manejo de asincronía con `async/await`
+- Comunicación entre frontend y backend
 - Traducción en tiempo real mientras el usuario escribe
-- Implementación de **debounce** para evitar peticiones innecesarias
-- Funcionalidad de intercambio de idiomas
-- Diseño completamente responsive (mobile-first)
-- Backend desplegado en la nube
-- Separación clara entre frontend y backend
 
----
+En lugar de usar frameworks modernos, el objetivo fue trabajar directamente con JavaScript puro para reforzar bases.
 
 ## 🛠 Tecnologías utilizadas
 
@@ -35,7 +35,7 @@ Translator App permite a los usuarios traducir texto de manera instantánea entr
 - TailwindCSS
 - JavaScript Vanilla
 - Fetch API
-
+- Deploy en 
 ### Backend
 - Node.js
 - Express.js
@@ -50,8 +50,8 @@ Translator App permite a los usuarios traducir texto de manera instantánea entr
 - Uso de `async/await` para manejo de asincronía
 - Integración con API REST externa
 - Manejo adecuado de errores HTTP
-- Optimización para dispositivos móviles (prevención de zoom automático en inputs en iOS)
-- Estructura de proyecto limpia y organizada
+- Optimización para dispositivos móviles
+- Estructura de proyecto sencilla y clara
 - Buenas prácticas con Git y control de versiones
 
 ---
